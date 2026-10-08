@@ -291,6 +291,218 @@ footer {
   margin: 20px auto;
 }
 
+.task-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.dark .task-form {
+  background: #2c2c2c;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.task-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.task-form select {
+  background: white;
+  color: black;
+}
+
+.dark .task-form select {
+  background: #333;
+  color: white;
+}
+
+.task-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==============================
+   PRACTICAL 6 - TASK ACTIONS
+============================== */
+
+.task-heading {
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.task-actions button {
+  flex: 1;
+  margin: 0;
+}
+
+.complete-btn {
+  background-color: #16a34a;
+}
+
+.complete-btn:hover {
+  background-color: #15803d;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+.error-message {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.dark .error-message {
+  background-color: #450a0a;
+  color: #fecaca;
+}
+
+/* ==============================
+   TOAST NOTIFICATION
+============================== */
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  padding: 14px 22px;
+  border-radius: 8px;
+
+  background-color: #1f2937;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  animation: toastSlide 0.3s ease;
+}
+
+@keyframes toastSlide {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ==============================
+   PRACTICAL 7 - AUTHENTICATION
+============================== */
+
+.login-card {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.dark .login-card {
+  background: #242424;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  max-width: 100%;
+}
+
+.login-error {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #fee2e2;
+  color: #991b1b !important;
+}
+
+.logout-btn {
+  margin: 0;
+  padding: 8px 15px;
+  background: #dc2626;
+}
+
+.logout-btn:hover {
+  background: #b91c1c;
+}
+
+/* ==============================
+   PRACTICAL 8 - LAZY LOADING
+============================== */
+
+.page-loader {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #ddd;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .task-actions {
+    flex-direction: column;
+  }
+}
+
 /* ==========================
    RESPONSIVE
 ========================== */
